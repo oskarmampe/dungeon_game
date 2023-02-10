@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weapon : Collidable
 {
     // Damage struct
-    public int[] damagePoint = { 1, 2, 3, 4, 5, 6, 75 };
+    public int[] damagePoint = { 1, 2, 3, 4, 5, 6, 7 };
     public float[] pushForce = { 2.1f, 2.2f, 2.5f, 3.0f, 4.5f, 5.0f, 6.5f };
 
     public int weaponLevel = 0;
@@ -69,6 +69,10 @@ public class Weapon : Collidable
 
     public void SetWeaponLevel(int lvl)
     {
+        if (lvl < 0 && lvl >= GameManager.instance.weaponSprites.Count)
+        {
+            
+        }
         weaponLevel = lvl;
         spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
         
