@@ -9,9 +9,9 @@ public class Enemy : Mover
     public float triggerLength = 0.5f;
     public float chaseLength = 1.5f;
     public bool chasing;
-    public bool collidingWithPlayer;
-    public Transform playerTransform;
-    public Vector3 startingPosition;
+    private bool collidingWithPlayer;
+    private Transform playerTransform;
+    private Vector3 startingPosition;
 
     public ContactFilter2D contactFilter;
     private BoxCollider2D hitbox;
@@ -73,8 +73,8 @@ public class Enemy : Mover
 
     protected override void Die()
     {
-        Destroy(gameObject);
         GameManager.instance.GrantXp(xpValue);
-        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
+        GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, GameManager.instance.player.transform.position, Vector3.up * 10, 3.0f);
+        Destroy(gameObject);
     }
 }

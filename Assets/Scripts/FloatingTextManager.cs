@@ -13,7 +13,6 @@ public class FloatingTextManager : MonoBehaviour
     private FloatingText GetFloatingText()
     {
         FloatingText floatingTxt = floatingTexts.Find(t => !t.active);
-
         if (floatingTxt == null) 
         {
             floatingTxt = new FloatingText();

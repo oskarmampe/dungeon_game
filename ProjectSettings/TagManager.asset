@@ -54,3 +54,6 @@ TagManager:
   - name: Weapon
     uniqueID: 3669174445
     locked: 0
+  - name: Wall
+    uniqueID: 2045855277
+    locked: 0

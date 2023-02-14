@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 99
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1427,7 +1427,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1435,6 +1435,48 @@ TextureImporter:
       bones: []
       spriteID: eddb8b1e3dd78164a885d9755fab5dc2
       internalID: 1247098282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 47
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13fefbd61ffeef41a925665f811196b
+      internalID: 363060274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61672c8688a0144ca613171c4c1789d
+      internalID: -74024300
       vertices: []
       indices: 
       edges: []
@@ -1481,6 +1523,7 @@ TextureImporter:
       chest_1: 467753594
       sword_4: 183201109
       skull_0: -576454627
+      boss_0: 363060274
       enemy_0: 1247098282
       pillar_3: 2143195624
       floor_6: 1683004154
@@ -1490,6 +1533,7 @@ TextureImporter:
       torch_1: -1529098250
       floor_0: 222968060
       player_1: -216662123
+      enemy_1: -74024300
       pillar_4: -1547843790
       wall_2: -1456241754
       sword_3: -1159116332

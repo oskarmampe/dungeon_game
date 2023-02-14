@@ -4,15 +4,17 @@ using UnityEngine;
 
 public abstract class Mover : Fighter
 {
-    
+
+    private Vector3 originalSize;
     protected BoxCollider2D boxCollider;
     protected Vector3 moveDelta;
     protected RaycastHit2D hit;
-    protected float ySpeed = 0.75f;
-    protected float xSpeed = 1.0f;
+    protected float ySpeed = 2.75f;
+    protected float xSpeed = 2.0f;
 
     protected virtual void Start()
     {
+        originalSize = transform.localScale;
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -25,11 +27,11 @@ public abstract class Mover : Fighter
         // this allows the player to turn
         if(moveDelta.x > 0) 
         {
-            transform.localScale = Vector3.one;
+            transform.localScale = originalSize;
         } 
         else if (moveDelta.x < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(originalSize.x * -1, originalSize.y, originalSize.z);
         }
 
         moveDelta += pushDirection;
